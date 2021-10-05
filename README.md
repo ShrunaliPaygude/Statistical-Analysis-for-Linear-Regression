@@ -1,4 +1,4 @@
-# Statistical-Analysis-for-Linear-Regression
+# National Football League Case-Study: Statistical-Analysis-for-Linear-Regression
 We have National Football league data which is provided in the data section, and we have to construct statistical analysis for linear regression and answer some questions related to the data.
 I will be using Minitab for the analysis part, you can use R or SAS for the same!
 For any queries regarding using minitab, please get in touch with me via https://github.com/ShrunaliPaygude
