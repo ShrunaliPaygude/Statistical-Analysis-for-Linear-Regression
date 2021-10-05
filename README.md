@@ -63,4 +63,96 @@ F-test: 4.83, p-value: 0.038
 X7 contributes as: Looking at p-value, <0.05, we reject the null hypothesis.
 Therefore the regression is significant at 5%
 
+************************************************************************************************************************************
+# Pinot wine case study and Statistical Analysis
+
+The quality of Pinot Noir wine is thought to be related to the properties of clarity, aroma,
+body, flavor, and oakiness. 
+Which is a good regressor?
+
+![image](https://user-images.githubusercontent.com/47711486/136080156-1d448d2b-6d61-4320-9b9f-b58ccd5832f8.png)
+
+After fitting multiple linear regression model relating wine quality to these regressors, we get the
+model equation as :
+Y = 4.00 + 12.34 x1 + 0.483 x2 + 0.273 x3 + 1.168 x4 - 0.684 x5
+
+# Testing for significance of regression. What conclusions can we draw?
+
+![image](https://user-images.githubusercontent.com/47711486/136080311-96d97c09-0404-4047-9767-6cf45214fcb8.png)
+
+Looking at the p-value for the regression, we see that the value is less than 0.05. These findings
+help us state that we reject the null hypothesis and our regression is significant.
+
+Conclusions:
+The level of significance is 0.05
+MSR=22.3081
+MSE=1.3515
+Fstat= MSR/MSE=16.5061
+There is a linear relationship between the variable Y and variable x1, x2, x3, x4, x5
+
+# Using t tests to assess the contribution of each regressor to the model and discussing the findings.
+
+![image](https://user-images.githubusercontent.com/47711486/136080496-6c871ce9-37b8-4f59-bc46-73f3458b0a98.png)
+
+The null and alternative hypothesis of each regressor is as follows,
+H0:β1=0
+H1:β1キ0
+
+
+x1:
+P-value =0.187>0.05, we fail to reject the null hypothesis
+T-test=1.35
+X1 is not statistically linear of the dependent variable.
+
+
+X2:
+P-value =0.086>0.05, we fail to reject the null hypothesis
+T-test=1.77
+X2 is not statistically linear of the dependent variable.
+
+
+X3:
+P-value =0.418>0.05, we fail to reject the null hypothesis
+T-test=0.82
+X3 is not statistically linear of the dependent variable.
+
+
+x4:
+P-value =0.001<0.05, we reject the null hypothesis
+T-test=3.84
+X4 is statistically linear of the dependent variable.
+
+
+X5:
+P-value =0.017<0.05, we reject the null hypothesis
+T-test=2.52
+X5 is statistically linear of the dependent variable.
+
+
+So only x4 and x5 are statistically significant variables to the model.
+We can rewrite the equation as:
+Y= 1.168X4-0.684X5
+
+# Calculating R2 and RAdj 2 for this model. Comparing these values to the R2 and RAdj 2 for the
+# linear regression model relating wine quality to aroma and flavor. Discussing the results.
+
+R-sq and R2 for the model is:
+
+![image](https://user-images.githubusercontent.com/47711486/136080801-34691574-3445-4961-85e8-e5c93052373d.png)
+
+R-sq: 72.06%
+R-sq adj: 67.69%
+
+Now, for linear regression model relating wine quality to aroma and flavor
+
+![image](https://user-images.githubusercontent.com/47711486/136080941-de4227fb-72ef-4283-84a7-985d5a733525.png)
+
+R-sq: 65.86%
+R-sq adj: 63.9%
+Looking at the above values, we can conclude that there is not much difference between both
+the values of R sq and R sq adj for the model and when only relating wine quality to aroma and
+flavor.
+
+
+
 
